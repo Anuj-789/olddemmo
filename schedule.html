@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schedule - IBP Old Age Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Extra CSS for Schedule Page */
+
+/* Hero Section */
+#hero-schedule {
+  text-align:center;
+  padding:50px 20px;
+  background:#f5f0e1;
+}
+#hero-schedule h2 {
+  color:#04578e;
+  font-size:2rem;
+  margin-bottom:15px;
+}
+#hero-schedule p {
+  font-size:1.1rem;
+  max-width:800px;
+  margin:0 auto;
+}
+
+/* Schedule Table */
+#daily-schedule {
+  max-width:1000px;
+  margin:10px auto;
+  overflow-x:auto;
+  padding: 20px 20px;
+}
+#daily-schedule table {
+  width:100%;
+  border-collapse:collapse;
+}
+#daily-schedule th, #daily-schedule td {
+  border:1px solid #ccc;
+  padding:12px;
+  text-align:center;
+}
+#daily-schedule th {
+  background:#04578e;
+  color:#fff;
+}
+#daily-schedule td {
+  background:#f5f0e1;
+  color:#04578e;
+}
+
+/* Special Events Section */
+#special-events {
+  max-width:900px;
+  margin:10px auto;
+  text-align:center;
+  padding: 20px 20px;
+}
+#special-events h2 {
+  color:#04578e;
+  margin-bottom:20px;
+}
+#special-events .event-card {
+  background:#f5f0e1;
+  margin:15px auto;
+  padding:15px 20px;
+  border-radius:10px;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Important Notes Section */
+#visitor-notes {
+  max-width:800px;
+  margin:50px auto;
+  background:#f5f0e1;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+#visitor-notes h2 {
+  color:#04578e;
+  margin-bottom:15px;
+}
+#visitor-notes p {
+  font-size:1rem;
+  margin:8px 0;
+  color:#028e91;
+}
+
+/* Donors Section */
+#donors {
+  max-width:900px;
+  margin:30px auto;
+  text-align:center;
+  padding: 20px 20px;
+}
+#donors h2 {
+  color:#04578e;
+  margin-bottom:20px;
+}
+#donors ul {
+  list-style:none;
+  padding:0;
+}
+#donors ul li {
+  background:#f5f0e1;
+  margin:8px 0;
+  padding:10px;
+  border-radius:8px;
+  display:inline-block;
+  margin-right:10px;
+  font-weight:500;
+  color:#028e91;
+}
+
+/* Mobile Responsiveness */
+@media(max-width:600px){
+  #daily-schedule table, #daily-schedule th, #daily-schedule td{
+    font-size:14px;
+    padding:8px;
+  }
+  #special-events .event-card, #visitor-notes, #donors ul li {
+    width:90%;
+    margin:10px auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <img src="images/logo.png" class="logo" alt="Logo">
+    <span class="site-name">Matri Pitri Seva Sadan</span>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="room-booking.html">Room Booking</a></li>
+    <li><a href="event-booking.html">Event's Booking</a></li>
+    <li><a href="volunteer.html">Volunteer Visit</a></li>
+    <li><a href="donation.html">Donate</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+  <div class="hamburger">&#9776;</div>
+</nav>
+<div class="sidebar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="room-booking.html">Room Booking</a></li>
+    <li><a href="event-booking.html">Event's Booking</a></li>
+    <li><a href="volunteer.html">Volunteer Visit</a></li>
+    <li><a href="donation.html">Donate</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+</div>
+
+<!-- Hero -->
+<section id="hero-schedule">
+  <h2>Daily Activity Schedule</h2>
+  <p>Here is a detailed schedule of daily activities for our elders. Visitors can refer to this to plan their interactions, assist in activities, or participate in special events.</p>
+</section>
+
+<!-- Daily Schedule Table -->
+<section id="daily-schedule">
+  <table>
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Activity</th>
+        <th>Location / Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>6:30 AM - 7:30 AM</td>
+        <td>Yoga & Meditation</td>
+        <td>Main Hall / Outdoors</td>
+      </tr>
+      <tr>
+        <td>7:30 AM - 8:30 AM</td>
+        <td>Breakfast</td>
+        <td>Dining Area</td>
+      </tr>
+      <tr>
+        <td>9:00 AM - 10:30 AM</td>
+        <td>Storytelling / Reading</td>
+        <td>Library / Activity Room</td>
+      </tr>
+      <tr>
+        <td>10:30 AM - 12:00 PM</td>
+        <td>Music & Arts</td>
+        <td>Activity Hall</td>
+      </tr>
+      <tr>
+        <td>12:00 PM - 1:00 PM</td>
+        <td>Lunch</td>
+        <td>Dining Area</td>
+      </tr>
+      <tr>
+        <td>1:00 PM - 2:30 PM</td>
+        <td>Rest / Nap</td>
+        <td>Rooms / Lounges</td>
+      </tr>
+      <tr>
+        <td>2:30 PM - 4:00 PM</td>
+        <td>Arts & Crafts</td>
+        <td>Activity Room</td>
+      </tr>
+      <tr>
+        <td>4:00 PM - 5:30 PM</td>
+        <td>Group Games</td>
+        <td>Open Area</td>
+      </tr>
+      <tr>
+        <td>5:30 PM - 6:00 PM</td>
+        <td>Evening Snacks</td>
+        <td>Dining Area</td>
+      </tr>
+      <tr>
+        <td>6:00 PM - 7:00 PM</td>
+        <td>Cultural Activities / Music</td>
+        <td>Main Hall</td>
+      </tr>
+      <tr>
+        <td>7:00 PM - 8:00 PM</td>
+        <td>Dinner</td>
+        <td>Dining Area</td>
+      </tr>
+      <tr>
+        <td>8:00 PM - 9:00 PM</td>
+        <td>Relaxation / Free Time</td>
+        <td>Rooms / Lounges</td>
+      </tr>
+      <tr>
+        <td>9:00 PM</td>
+        <td>Lights Out</td>
+        <td>Rooms</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- Special Events -->
+<section id="special-events">
+<h2>Special Events & Birthdays</h2>
+<div class="event-card"><strong>Birthday Celebration:</strong> 15th March - Cake & Music for Residents.</div>
+<div class="event-card"><strong>Community Camp:</strong> 10th April - Outdoor games and activities for elders and visitors.</div>
+<div class="event-card"><strong>Annual Cultural Day:</strong> 5th May - Special performances and gatherings.</div>
+</section>
+
+<!-- Visitor Notes -->
+<section id="visitor-notes">
+<h2>Visitor Guidelines & Notes</h2>
+<p>Please arrive 10 minutes before activities to assist or observe.</p>
+<p>Maintain calm and positive environment around residents.</p>
+<p>Follow hygiene and safety protocols.</p>
+<p>Photography only allowed with prior permission.</p>
+</section>
+
+<!-- Donors Section -->
+<section id="donors">
+<h2>Our Supporters & Donors</h2>
+<ul>
+  <li>Mr. Anil Kumar</li>
+  <li>Mrs. Rekha Sharma</li>
+  <li>ABC Foundation</li>
+  <li>XYZ Trust</li>
+  <li>Mr. Ramesh Gupta</li>
+</ul>
+</section>
+
+<footer>
+  &copy; IBP Old Age Home | Made by Anuj Gupta
+</footer>
+
+<script src="script.js"></script>
+<script>
+// Hamburger toggle
+const hamburger = document.querySelector('.hamburger');
+const sidebar = document.querySelector('.sidebar');
+hamburger.addEventListener('click', () => {
+  sidebar.style.right = sidebar.style.right === '0px' ? '-250px' : '0px';
+});
+</script>
+
+</body>
+</html>

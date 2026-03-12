@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - IBP Old Age Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- Link main CSS -->
+<link rel="stylesheet" href="style.css">
+<style>
+/* Extra CSS for About page only */
+.box{
+  align-items: center;
+  background:#f5f0e1;
+  padding: 10px;
+  border-radius: 10px;
+  width: 20%;
+
+    display: flex;          /* Flex container banaya */
+  flex-direction: column; /* Items ko vertical stack kare */
+  justify-content: center; /* Vertical center */
+  align-items: center;
+}
+
+/* Founder Section */
+#founder .home-content div img{
+  max-width:300px;
+  margin-bottom:15px;
+}
+
+/* Timeline / History */
+.timeline{
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.timeline div{
+  flex:1 1 200px;
+  margin:10px;
+}
+
+/* Horizontal auto-scrolling sections */
+.scrolling-section{
+  overflow-x:auto;
+  white-space:nowrap;
+  gap:10px;
+  padding-bottom:10px;
+}
+.scrolling-section div{
+  display:inline-block;
+  flex:none;
+  min-width:200px;
+}
+.scrolling-section::-webkit-scrollbar{
+  height:8px;
+}
+.scrolling-section::-webkit-scrollbar-thumb{
+  background:#04578e;; border-radius:5px;
+}
+.scrolling-section::-webkit-scrollbar-track{
+  background:#f5f0e1;
+}
+
+@media(max-width:600px){
+  .timeline,.scrolling-section{
+    flex-direction:column;
+    align-items:center;
+  }
+  #founder .home-content div img{
+    max-width:80%;
+  }
+  .stats{
+    flex-direction: row;
+
+  }
+  .box{
+
+  width: 40%;
+}
+#awards,#gallery,#partners{
+margin:20px auto;
+}
+#awards h2,#gallery h2,#partners h2{
+margin:20px auto;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar is same as main -->
+<nav>
+  <img src="images/logo.png" class="logo" alt="Logo">
+    <span class="site-name">Matri Pitri Seva Sadan</span>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="room-booking.html">Room Booking</a></li>
+    <li><a href="event-booking.html">Event's Booking</a></li>
+    <li><a href="volunteer.html">Volunteer Visit</a></li>
+    <li><a href="donation.html">Donate</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+  <div class="hamburger">&#9776;</div>
+</nav>
+
+<div class="sidebar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="room-booking.html">Room Booking</a></li>
+    <li><a href="event-booking.html">Event's Booking</a></li>
+    <li><a href="volunteer.html">Volunteer Visit</a></li>
+    <li><a href="donation.html">Donate</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+</div>
+
+<!-- Founder Section -->
+<section id="founder">
+<h2>Founder</h2>
+<div class="home-content">
+  <div>
+    <img src="https://www.oneindia.com/img/2019/06/azim-premji-1559891775.jpg" alt="Founder">
+    <p>Our founder, Anuj Gupta, started IBP Vridhaashram to provide care, love, and respect for the elderly community in Ibrahimpatnam.</p>
+  </div>
+</div>
+</section>
+
+<!-- History / Timeline -->
+<section id="history">
+<h2>Our History</h2>
+<div class="timeline">
+  <div><h3>2003</h3><p>IBP Old Age Home was established with 10 residents.</p></div>
+  <div><h3>2008</h3><p>Expanded facilities and started volunteer programs.</p></div>
+  <div><h3>2015</h3><p>Reached 50+ residents and added healthcare support.</p></div>
+  <div><h3>2023</h3><p>1000+ donations received and community recognition achieved.</p></div>
+</div>
+</section>
+
+<!-- Achievements / Awards -->
+<section id="awards">
+<h2>Achievements & Awards</h2>
+<div class="scrolling-section">
+  <div><img src="https://images.indianexpress.com/2026/03/Happy-Holi-2026-Wishes-2.jpg" alt="Award 1"><p>Best Elder Care 2018</p></div>
+  <div><img src="https://images.indianexpress.com/2026/03/Happy-Holi-2026-Wishes-2.jpg" alt="Award 2"><p>Community Excellence 2019</p></div>
+  <div><img src="https://images.indianexpress.com/2026/03/Happy-Holi-2026-Wishes-2.jpg" alt="Award 3"><p>Volunteer Recognition 2020</p></div>
+  <div><img src="https://images.indianexpress.com/2026/03/Happy-Holi-2026-Wishes-2.jpg" alt="Award 4"><p>Healthcare Support 2021</p></div>
+</div>
+</section>
+
+<!-- Partners / Sponsors -->
+<section id="partners">
+<h2>Our Partners & Sponsors</h2>
+<div class="scrolling-section">
+  <div><img src="edia.istockphoto.com/id/1205693906/photo/colorful-of-fireworks-in-holiday-festival-from-pattaya-chonburi-thailand.jpg?s=170667a&w=0&k=20&c=Q_nq2_UwVU0-AOynGEjvnN8ZYiKFKUnI8gEhpMqgOf4=" alt="Partner 1"></div>
+  <div><img src="https://media.istockphoto.com/id/1205693906/photo/colorful-of-fireworks-in-holiday-festival-from-pattaya-chonburi-thailand.jpg?s=170667a&w=0&k=20&c=Q_nq2_UwVU0-AOynGEjvnN8ZYiKFKUnI8gEhpMqgOf4=" alt="Partner 2"></div>
+  <div><img src="https://media.istockphoto.com/id/1205693906/photo/colorful-of-fireworks-in-holiday-festival-from-pattaya-chonburi-thailand.jpg?s=170667a&w=0&k=20&c=Q_nq2_UwVU0-AOynGEjvnN8ZYiKFKUnI8gEhpMqgOf4=" alt="Partner 3"></div>
+  <div><img src="https://media.istockphoto.com/id/1205693906/photo/colorful-of-fireworks-in-holiday-festival-from-pattaya-chonburi-thailand.jpg?s=170667a&w=0&k=20&c=Q_nq2_UwVU0-AOynGEjvnN8ZYiKFKUnI8gEhpMqgOf4=" alt="Partner 4"></div>
+</div>
+</section>
+
+<!-- Photo Gallery -->
+<section id="gallery">
+<h2>Photo Gallery</h2>
+<div class="scrolling-section">
+  <div><img src="https://tse3.mm.bing.net/th/id/OIP.vQcIYuRazaUfIXn8q9TDcQHaE7?w=626&h=417&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Gallery 1"></div>
+  <div><img src="https://tse3.mm.bing.net/th/id/OIP.vQcIYuRazaUfIXn8q9TDcQHaE7?w=626&h=417&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Gallery 2"></div>
+  <div><img src="https://tse3.mm.bing.net/th/id/OIP.vQcIYuRazaUfIXn8q9TDcQHaE7?w=626&h=417&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Gallery 3"></div>
+  <div><img src="https://tse3.mm.bing.net/th/id/OIP.vQcIYuRazaUfIXn8q9TDcQHaE7?w=626&h=417&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Gallery 4"></div>
+</div>
+</section>
+
+<!-- Impact Stats -->
+<section id="impact">
+<h2>Impact Statistics</h2>
+<div class="stats">
+  <div class="box"><h3>30+</h3><p>Residents</p></div>
+  <div class="box"><h3>20+</h3><p>Volunteers</p></div>
+  <div class="box"> <h3>20+</h3><p>Years of Service</p></div>
+  <div class="box"><h3>1000+</h3><p>Donations </p></div>
+</div>
+</section>
+
+<footer>
+  &copy; IBP Old Age Home | Made by Anuj Gupta
+</footer>
+
+<!-- Link main JS -->
+<script src="script.js"></script>
+<script>
+// Extra JS for auto horizontal scroll (Awards / Partners / Gallery)
+document.querySelectorAll('.scrolling-section').forEach(section=>{
+  let scrollAmount = 0;
+  setInterval(()=>{
+    if(scrollAmount >= section.scrollWidth - section.clientWidth){
+      scrollAmount = 0;
+    } else {
+      scrollAmount += 1;
+    }
+    section.scrollTo({left: scrollAmount, behavior:'smooth'});
+  }, 30);
+});
+</script>
+<script>
+// Hamburger toggle
+const hamburger = document.querySelector('.hamburger');
+const sidebar = document.querySelector('.sidebar');
+hamburger.addEventListener('click', ()=>{
+  sidebar.style.right = sidebar.style.right==='0px' ? '-250px' : '0px';
+});
+</script>
+</body>
+</html>
