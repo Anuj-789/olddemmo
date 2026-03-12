@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate - IBP Old Age Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- Main CSS -->
+<link rel="stylesheet" href="style.css">
+<style>
+/* Extra CSS for Donation Page */
+
+/* Hero Section */
+#hero-donation {
+  text-align:center;
+  padding:50px 20px;
+  background:#f5f0e1;
+}
+#hero-donation h2 {
+  color:#04578e;
+  font-size:2rem;
+  margin-bottom:15px;
+}
+#hero-donation p {
+  font-size:1.1rem;
+  max-width:800px;
+  margin:0 auto;
+}
+
+/* Donation Options */
+#donation-options {
+  max-width:1000px;
+  margin:40px auto;
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+#donation-options .option-card {
+  flex:1 1 250px;
+  background:#f5f0e1;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+#donation-options .option-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 6px 12px rgba(0,0,0,0.2);
+}
+#donation-options .option-card h3 {
+  color:#04578e;
+  margin-bottom:10px;
+}
+#donation-options .option-card p {
+  font-size:1rem;
+  color:#028e91;
+}
+
+/* How Donation Helps */
+#how-helps {
+  max-width:1000px;
+  margin:50px auto;
+  text-align:center;
+}
+#how-helps h2 {
+  color:#04578e;
+  margin-bottom:30px;
+}
+#how-helps .help-cards {
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+#how-helps .help-card {
+  flex:1 1 250px;
+  background:#f5f0e1;
+  border-radius:10px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+#how-helps .help-card img {
+  max-width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+#how-helps .help-card p {
+  font-size:0.95rem;
+  color:#028e91;
+}
+
+/* Donation Form */
+#donation-form {
+  max-width:700px;
+  margin:50px auto;
+  padding:20px;
+  background:#f5f0e1;
+  border-radius:10px;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+#donation-form h2 {
+  color:#04578e;
+  margin-bottom:20px;
+  text-align:center;
+}
+#donation-form label {
+  display:block;
+  margin-top:10px;
+  font-weight:500;
+}
+#donation-form input, #donation-form select, #donation-form textarea {
+  width:100%;
+  padding:8px 10px;
+  margin-top:5px;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+#donation-form button {
+  margin-top:15px;
+  padding:10px 20px;
+  background:#04578e;
+  color:#fff;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:1rem;
+}
+#donation-form button:hover {
+  background:#04578e;
+}
+
+/* Testimonials */
+#donor-testimonials {
+  max-width:900px;
+  margin:50px auto;
+  text-align:center;
+}
+#donor-testimonials h2 {
+  color:#04578e;
+  margin-bottom:20px;
+}
+#donor-testimonials .testimonial-card {
+  background:#f5f0e1;
+  margin:15px auto;
+  padding:15px 20px;
+  border-radius:10px;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Payment Methods */
+#payment-methods {
+  text-align:center;
+  margin:50px 0;
+}
+#payment-methods img {
+  max-width:100px;
+  margin:0 15px;
+  vertical-align:middle;
+}
+
+/* Mobile Responsiveness */
+@media(max-width:600px){
+  #donation-options, #how-helps .help-cards {
+    flex-direction:column;
+    align-items:center;
+  }
+  #donation-options .option-card, #how-helps .help-card {
+    width:90%;
+  }
+  #donation-form {
+    width:90%;
+    padding:15px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <img src="images/logo.png" class="logo" alt="Logo">
+    <span class="site-name">Matri Pitri Seva Sadan</span>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="room-booking.html">Room Booking</a></li>
+    <li><a href="event-booking.html">Event's Booking</a></li>
+    <li><a href="volunteer.html">Volunteer Visit</a></li>
+    <li><a href="donation.html">Donate</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+  <div class="hamburger">&#9776;</div>
+</nav>
+<div class="sidebar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="room-booking.html">Room Booking</a></li>
+    <li><a href="event-booking.html">Event's Booking</a></li>
+    <li><a href="volunteer.html">Volunteer Visit</a></li>
+    <li><a href="donation.html">Donate</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+</div>
+
+<!-- Hero -->
+<section id="hero-donation">
+  <h2>Support Our Elders</h2>
+  <p>Your generosity can bring comfort, care, and happiness to the residents of IBP Old Age Home. Every contribution counts!</p>
+</section>
+
+<!-- Donation Options -->
+<section id="donation-options">
+  <div class="option-card">
+    <h3>One-Time Donation</h3>
+    <p>Make a one-time donation to support our daily needs.</p>
+  </div>
+  <div class="option-card">
+    <h3>Monthly Support</h3>
+    <p>Become a monthly donor and provide consistent care.</p>
+  </div>
+  <div class="option-card">
+    <h3>Purpose-Based Donation</h3>
+    <p>Contribute towards meals, activities, or room maintenance.</p>
+  </div>
+</section>
+
+<!-- How Donation Helps -->
+<section id="how-helps">
+<h2>How Your Donation Helps</h2>
+<div class="help-cards">
+  <div class="help-card">
+    <img src="https://img.freepik.com/premium-photo/view-wide-mountain-river-summer_974629-131275.jpg" alt="Meals">
+    <p>Nutritious meals for residents</p>
+  </div>
+  <div class="help-card">
+    <img src="https://img.freepik.com/premium-photo/view-wide-mountain-river-summer_974629-131275.jpg" alt="Activities">
+    <p>Organizing activities and events</p>
+  </div>
+  <div class="help-card">
+    <img src="https://img.freepik.com/premium-photo/view-wide-mountain-river-summer_974629-131275.jpg" alt="Room Maintenance">
+    <p>Maintaining rooms & facilities</p>
+  </div>
+</div>
+</section>
+
+<!-- Donation Form -->
+<section id="donation-form">
+<h2>Make a Donation</h2>
+<form id="donationForm">
+  <label for="donor-name">Full Name</label>
+  <input type="text" id="donor-name" required>
+  
+  <label for="donor-email">Email</label>
+  <input type="email" id="donor-email" required>
+  
+  <label for="donor-contact">Contact Number</label>
+  <input type="number" id="donor-contact" required>
+  
+  <label for="donation-type">Donation Type</label>
+  <select id="donation-type" required>
+    <option value="one-time">One-Time</option>
+    <option value="monthly">Monthly</option>
+    <option value="purpose">Purpose-Based</option>
+  </select>
+  
+  <label for="donation-amount">Amount</label>
+  <input type="number" id="donation-amount" placeholder="Enter amount" required>
+  
+  <label for="donation-message">Message (Optional)</label>
+  <textarea id="donation-message" rows="3"></textarea>
+  
+  <button type="submit">Donate Now</button>
+</form>
+</section>
+
+<!-- Donor Testimonials -->
+<section id="donor-testimonials">
+<h2>Our Donors</h2>
+<div class="testimonial-card"><strong>Rakesh:</strong> “Glad to support this noble cause!”</div>
+<div class="testimonial-card"><strong>Sneha:</strong> “My donation made a difference in residents' lives.”</div>
+<div class="testimonial-card"><strong>Vikram:</strong> “Happy to contribute towards activities and meals.”</div>
+<div class="testimonial-card"><strong>Priya:</strong> “Amazing organization, proud to support them.”</div>
+</section>
+
+<!-- Payment Methods -->
+<section id="payment-methods">
+<h2>We Accept</h2>
+<img src="images/upi.png" alt="UPI">
+<img src="images/credit-card.png" alt="Credit Card">
+<img src="images/netbanking.png" alt="Net Banking">
+</section>
+
+<footer>
+  &copy; IBP Old Age Home | Made by Anuj Gupta
+</footer>
+
+<script>
+// Dummy donation form submission
+document.getElementById('donationForm').addEventListener('submit', e => {
+  e.preventDefault();
+  alert('Thank you for your donation!');
+  e.target.reset();
+});
+
+// Hamburger toggle
+const hamburger = document.querySelector('.hamburger');
+const sidebar = document.querySelector('.sidebar');
+hamburger.addEventListener('click', () => {
+  sidebar.style.right = sidebar.style.right === '0px' ? '-250px' : '0px';
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volunteer Visit - IBP Old Age Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- Main CSS -->
+<link rel="stylesheet" href="style.css">
+<style>
+/* Extra CSS for Volunteer Page */
+
+/* Hero Section */
+#hero-volunteer {
+  text-align:center;
+  padding:50px 20px;
+  background:#f5f0e1;
+}
+#hero-volunteer h2 {
+ color:#04578e;
+  font-size:2rem;
+  margin-bottom:15px;
+}
+#hero-volunteer p {
+  font-size:1.1rem;
+  max-width:800px;
+  margin:0 auto;
+}
+
+/* Activities Section */
+#activities {
+  max-width:1200px;
+  margin:40px auto;
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+#activities .activity-card {
+  flex:1 1 250px;
+  background:#f5f0e1;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+#activities .activity-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 6px 12px rgba(0,0,0,0.2);
+}
+#activities .activity-card img {
+  max-width:100%;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+#activities .activity-card h3 {
+  color:#04578e;
+  margin-bottom:10px;
+}
+#activities .activity-card p {
+  font-size:1rem;
+  color:#028e91;
+}
+
+#volunteer-gallery {
+  display: flex;           /* keep flex */
+  overflow-x: auto;
+  scroll-behavior: auto;   /* no smooth, handled in JS */
+  gap: 10px;
+  padding: 10px;
+}
+
+#volunteer-gallery div {
+  flex: 0 0 auto;          /* key: prevent shrinking */
+  width: 200px;
+  text-align: center;
+}
+
+#volunteer-gallery div img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+#volunteer-gallery div p {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #04578e;
+}
+#volunteer-gallery::-webkit-scrollbar{
+  height:8px;
+}
+#volunteer-gallery::-webkit-scrollbar-thumb{
+  background:#04578e;;
+  border-radius:5px;
+}
+#volunteer-gallery::-webkit-scrollbar-track{
+  background:#f5f0e1;
+}
+
+/* Volunteer Form */
+#volunteer-form {
+  max-width:700px;
+  margin:50px auto;
+  padding:20px;
+  background:#f5f0e1;
+  border-radius:10px;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+#volunteer-form h2 {
+ color:#04578e;
+  margin-bottom:20px;
+  text-align:center;
+}
+#volunteer-form label {
+  display:block;
+  margin-top:10px;
+  font-weight:500;
+}
+#volunteer-form input, #volunteer-form select, #volunteer-form textarea {
+  width:100%;
+  padding:8px 10px;
+  margin-top:5px;
+  border-radius:5px;
+  border:1px solid #ccc;
+}
+#volunteer-form button {
+  margin-top:15px;
+  padding:10px 20px;
+  background:#04578e;
+  color:#fff;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:1rem;
+}
+#volunteer-form button:hover {
+  background:#5a361e;
+}
+
+/* Testimonials */
+#volunteer-testimonials {
+  max-width:900px;
+  margin:50px auto;
+  text-align:center;
+}
+#volunteer-testimonials h2 {
+  color:#04578e;
+  margin-bottom:20px;
+}
+#volunteer-testimonials .testimonial-card {
+  background:#f5f0e1;
+  margin:15px auto;
+  padding:15px 20px;
+  border-radius:10px;
+  box-shadow:0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Mobile Responsiveness */
+@media(max-width:600px){
+  #activities {
+    flex-direction:column;
+    align-items:center;
+  }
+  #activities .activity-card {
+    width:90%;
+  }
+  #volunteer-gallery div {
+    min-width:150px;
+  }
+  #volunteer-form {
+    width:90%;
+    padding:15px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <img src="images/logo.png" class="logo" alt="Logo">
+   <span class="site-name">Matri Pitri Seva Sadan</span>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="room-booking.html">Room Booking</a></li>
+    <li><a href="event-booking.html">Event's Booking</a></li>
+    <li><a href="volunteer.html">Volunteer Visit</a></li>
+    <li><a href="donation.html">Donate</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+  <div class="hamburger">&#9776;</div>
+</nav>
+<div class="sidebar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="room-booking.html">Room Booking</a></li>
+    <li><a href="event-booking.html">Event's Booking</a></li>
+    <li><a href="volunteer.html">Volunteer Visit</a></li>
+    <li><a href="donation.html">Donate</a></li>
+    <li><a href="schedule.html">Schedule</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+</div>
+
+<!-- Hero -->
+<section id="hero-volunteer">
+  <h2>Join Us as a Volunteer</h2>
+  <p>Spend time with our elders, help with activities, and make a meaningful impact. Become a part of IBP Old Age Home's family!</p>
+</section>
+
+<!-- Activities Section -->
+<section id="activities">
+  <div class="activity-card">
+    <img src="https://img.freepik.com/premium-photo/view-wide-mountain-river-summer_974629-131275.jpg" alt="Yoga Session">
+    <h3>Yoga & Meditation</h3>
+    <p>Guide or participate in relaxing yoga and meditation sessions with elders.</p>
+  </div>
+  <div class="activity-card">
+    <img src="https://img.freepik.com/premium-photo/view-wide-mountain-river-summer_974629-131275.jpg" alt="Storytelling">
+    <h3>Storytelling & Reading</h3>
+    <p>Read books, share stories, or engage elders in creative activities.</p>
+  </div>
+  <div class="activity-card">
+    <img src="https://img.freepik.com/premium-photo/view-wide-mountain-river-summer_974629-131275.jpg" alt="Music Session">
+    <h3>Music & Arts</h3>
+    <p>Conduct or assist in music, singing, or art sessions for residents.</p>
+  </div>
+  <div class="activity-card">
+    <img src="https://img.freepik.com/premium-photo/view-wide-mountain-river-summer_974629-131275.jpg" alt="Event Support">
+    <h3>Event & Camp Assistance</h3>
+    <p>Help organize special events, birthday celebrations, or small community camps.</p>
+  </div>
+</section>
+
+<!-- Volunteer Gallery -->
+<section id="volunteer-gallery-section">
+<h2 style="text-align:center; color:#04578e;">Our Volunteers in Action</h2>
+<div id="volunteer-gallery">
+  <div><img src="https://img.freepik.com/premium-photo/view-wide-mountain-river-summer_974629-131275.jpg" alt="Volunteer 1"><p>Yoga Session</p></div>
+  <div><img src="https://img.freepik.com/premium-photo/view-wide-mountain-river-summer_974629-131275.jpg" alt="Volunteer 2"><p>Arts & Crafts</p></div>
+  <div><img src="https://img.freepik.com/premium-photo/view-wide-mountain-river-summer_974629-131275.jpg" alt="Volunteer 3"><p>Storytelling</p></div>
+  <div><img src="https://img.freepik.com/premium-photo/view-wide-mountain-river-summer_974629-131275.jpg" alt="Volunteer 4"><p>Music Session</p></div>
+</div>
+</section>
+
+<!-- Volunteer Form -->
+<section id="volunteer-form">
+<h2>Sign Up to Volunteer</h2>
+<form id="volunteerForm">
+  <label for="name">Full Name</label>
+  <input type="text" id="name" required>
+  
+  <label for="email">Email</label>
+  <input type="email" id="email" required>
+  
+  <label for="contact">Contact Number</label>
+  <input type="number" id="number" required>
+  
+  <label for="availability">Availability</label>
+  <input type="text" id="availability" placeholder="DD/MM/YYYY or Days & Hours" required>
+  
+  <label for="interest">Area of Interest</label>
+  <select id="interest" required>
+    <option value="yoga">Yoga & Meditation</option>
+    <option value="storytelling">Storytelling & Reading</option>
+    <option value="music">Music & Arts</option>
+    <option value="event">Event & Camp Assistance</option>
+  </select>
+  
+  <label for="skills">Special Skills / Notes</label>
+  <textarea id="skills" rows="4"></textarea>
+  
+  <button type="submit">Send Volunteer Request</button>
+</form>
+</section>
+
+<!-- Previous Volunteers Testimonials -->
+<section id="volunteer-testimonials">
+<h2>Previous Volunteers' Feedback</h2>
+<div class="testimonial-card"><strong>Amit:</strong> “An amazing experience! Loved spending time with elders.”</div>
+<div class="testimonial-card"><strong>Neha:</strong> “The activities are well-organized and very fulfilling.”</div>
+<div class="testimonial-card"><strong>Rohit:</strong> “A heartwarming and life-changing volunteer experience.”</div>
+</section>
+
+<footer>
+  &copy; IBP Old Age Home | Made by Anuj Gupta
+</footer>
+
+<script src="script.js"></script>
+<script>
+// Dummy form submission
+document.getElementById('volunteerForm').addEventListener('submit', e => {
+  e.preventDefault();
+  alert('Volunteer request sent!');
+  e.target.reset();
+});
+
+// Hamburger toggle
+const hamburger = document.querySelector('.hamburger');
+const sidebar = document.querySelector('.sidebar');
+hamburger.addEventListener('click', () => {
+  sidebar.style.right = sidebar.style.right === '0px' ? '-250px' : '0px';
+});
+
+// Auto-scroll volunteer gallery
+const gallery = document.getElementById('event-gallery');
+let scrollAmount = 0;
+setInterval(()=>{
+  if(scrollAmount >= gallery.scrollWidth - gallery.clientWidth){
+    scrollAmount = 0;
+  } else {
+    scrollAmount += 1;
+  }
+  gallery.scrollTo({left:scrollAmount, behavior:'smooth'});
+}, 30);
+</script>
+
+</body>
+</html>

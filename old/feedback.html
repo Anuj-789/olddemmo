@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - IBP Old Age Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra CSS for Feedback Page */
+   
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    h2 {
+      color: #04578e;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Tabs */
+    .tab-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .tab-buttons button {
+      color: #04578e;
+      padding: 10px 20px;
+      border: none;
+      background: #f5f0e1;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .tab-buttons button.active,
+    .tab-buttons button:hover {
+      background: #04578e;
+      color: #fff;
+    }
+
+    .tab-content {
+      display: none;
+      background: #f5f0e1;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Form */
+    .feedback-form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    .feedback-form input,
+    .feedback-form select,
+    .feedback-form textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .feedback-form button {
+      margin-top: 15px;
+      padding: 10px 20px;
+     background:#04578e;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .feedback-form button:hover {
+    background:#1b275c;
+    }
+
+    /* Previous Feedback */
+    .previous-feedback {
+      margin-top: 25px;
+    }
+
+    .previous-feedback h3 {
+      margin-bottom: 10px;
+      color: #04578e;
+    }
+
+    .previous-feedback div {
+      background: #fff;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    @media(max-width:600px) {
+      nav ul {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .tab-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <span class="site-name">Matri Pitri Seva Sadan</span>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="room-booking.html">Room Booking</a></li>
+      <li><a href="event-booking.html">Event Booking</a></li>
+      <li><a href="volunteer.html">Volunteer Visit</a></li>
+      <li><a href="donation.html">Donate</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+  <div class="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="room-booking.html">Room Booking</a></li>
+      <li><a href="event-booking.html">Event Booking</a></li>
+      <li><a href="volunteer.html">Volunteer Visit</a></li>
+      <li><a href="donation.html">Donate</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <h2>Share Your Feedback</h2>
+
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="room">Room Stay</button>
+      <button class="tab-btn" data-tab="event">Event Booking</button>
+      <button class="tab-btn" data-tab="volunteer">Volunteer Visit</button>
+      <button class="tab-btn" data-tab="donation">Donation Experience</button>
+    </div>
+
+    <!-- Room Feedback -->
+    <div class="tab-content active" id="room">
+      <form class="feedback-form" id="roomForm">
+        <label for="roomName">Full Name</label>
+        <input type="text" id="roomName" required>
+        <label for="roomEmail">Email</label>
+        <input type="email" id="roomEmail" required>
+        <label for="roomRating">Rating</label>
+        <select id="roomRating" required>
+          <option value="">Select</option>
+          <option>1 - Poor</option>
+          <option>2 - Fair</option>
+          <option>3 - Good</option>
+          <option>4 - Very Good</option>
+          <option>5 - Excellent</option>
+        </select>
+        <label for="roomComments">Comments</label>
+        <textarea id="roomComments" rows="4"></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <div class="previous-feedback">
+        <h3>Previous Feedback</h3>
+        <div><strong>Rohit:</strong> Very clean and comfortable stay!</div>
+        <div><strong>Priya:</strong> Loved the room and facilities.</div>
+      </div>
+    </div>
+
+    <!-- Event Feedback -->
+    <div class="tab-content" id="event">
+      <form class="feedback-form" id="eventForm">
+        <label for="eventName">Full Name</label>
+        <input type="text" id="eventName" required>
+        <label for="eventEmail">Email</label>
+        <input type="email" id="eventEmail" required>
+        <label for="eventRating">Rating</label>
+        <select id="eventRating" required>
+          <option value="">Select</option>
+          <option>1 - Poor</option>
+          <option>2 - Fair</option>
+          <option>3 - Good</option>
+          <option>4 - Very Good</option>
+          <option>5 - Excellent</option>
+        </select>
+        <label for="eventComments">Comments</label>
+        <textarea id="eventComments" rows="4"></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <div class="previous-feedback">
+        <h3>Previous Feedback</h3>
+        <div><strong>Arjun:</strong> Event hall was spacious and well-managed.</div>
+      </div>
+    </div>
+
+    <!-- Volunteer Feedback -->
+    <div class="tab-content" id="volunteer">
+      <form class="feedback-form" id="volunteerFbForm">
+        <label for="volName">Full Name</label>
+        <input type="text" id="volName" required>
+        <label for="volEmail">Email</label>
+        <input type="email" id="volEmail" required>
+        <label for="volRating">Rating</label>
+        <select id="volRating" required>
+          <option value="">Select</option>
+          <option>1 - Poor</option>
+          <option>2 - Fair</option>
+          <option>3 - Good</option>
+          <option>4 - Very Good</option>
+          <option>5 - Excellent</option>
+        </select>
+        <label for="volComments">Comments</label>
+        <textarea id="volComments" rows="4"></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <div class="previous-feedback">
+        <h3>Previous Feedback</h3>
+        <div><strong>Neha:</strong> Loved interacting with the elders.</div>
+      </div>
+    </div>
+
+    <!-- Donation Feedback -->
+    <div class="tab-content" id="donation">
+      <form class="feedback-form" id="donationForm">
+        <label for="donName">Full Name</label>
+        <input type="text" id="donName" required>
+        <label for="donEmail">Email</label>
+        <input type="email" id="donEmail" required>
+        <label for="donRating">Rating</label>
+        <select id="donRating" required>
+          <option value="">Select</option>
+          <option>1 - Poor</option>
+          <option>2 - Fair</option>
+          <option>3 - Good</option>
+          <option>4 - Very Good</option>
+          <option>5 - Excellent</option>
+        </select>
+        <label for="donComments">Comments</label>
+        <textarea id="donComments" rows="4"></textarea>
+        <button type="submit">Submit Feedback</button>
+      </form>
+      <div class="previous-feedback">
+        <h3>Previous Feedback</h3>
+        <div><strong>Amit:</strong> Donation process was smooth and easy.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer style="text-align:center; padding:20px;background:linear-gradient(935deg,#028e91,#04578e ); color:#fff;">
+    &copy; IBP Old Age Home | Made by Anuj Gupta
+  </footer>
+
+  <script>
+    // Sidebar toggle
+    const hamburger = document.querySelector('.hamburger');
+    const sidebar = document.querySelector('.sidebar');
+    hamburger.addEventListener('click', () => {
+      sidebar.style.right = sidebar.style.right === '0px' ? '-250px' : '0px';
+    });
+
+    // Tabs functionality
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+
+    // Form submissions
+    function handleFormSubmit(formId) {
+      const form = document.getElementById(formId);
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        alert('Feedback submitted! Thank you!');
+        form.reset();
+      });
+    }
+
+    ['roomForm', 'eventForm', 'volunteerFbForm', 'donationForm'].forEach(handleFormSubmit);
+  </script>
+
+</body>
+
+</html>
